@@ -1,0 +1,28 @@
+A simple administrator toolkit foundation to get what he wants from farm of
+servers.
+
+Assumptions:
+- Remote commands are exucuted using ssh and keys are registered for no password login (otherwise password prompt is provided).
+- Remote user is the same as local and have direct access to all required commands.
+With small tuing username can be put in hosts file as a part of hostname.
+
+
+# setup/installation
+1. execute (to download buildout and fabric)
+$ make
+(To make buildout compatible with latest OSX I needed to patch it. Makefile
+automatically patch it. Unfortunately it's not deeply tested on other
+systems. So in case of buildout issues just remove patching from Makefile)
+2. edit hosts file
+
+
+# usage
+full run:
+$ ./bin/fab all summary
+
+help:
+$ ./bin/fab -l
+
+example short run:
+$ ./bin/fab ping ps vmstat summary
+
