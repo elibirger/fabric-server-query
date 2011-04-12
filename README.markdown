@@ -37,20 +37,25 @@ The average file size per directory under /home (recursive, server side calculat
 
 setup/installation
 ------------------
-- execute (to download buildout and fabric)
-        make
-(To make buildout compatible with latest OSX I needed to patch it. Makefile
-automatically patch it. Unfortunately it's not deeply tested on other
-systems. So in case of buildout issues just remove patching from Makefile)
+- execute (to download buildout and fabric). (To make buildout compatible with latest OSX I needed to patch it. Makefile automatically patch it. Unfortunately it's not deeply tested on other systems. So in case of buildout issues just remove patching from Makefile)
+
+	make
+
 - edit hosts file
-        vi hosts
+
+	vi hosts
 
 
 usage
 -----
-full run:
-        ./bin/fab all summary
-help:
-        ./bin/fab -l
-example short run:
-        ./bin/fab ping ps vmstat summary
+- full run
+
+	./bin/fab all summary
+
+- help
+
+	./bin/fab -l
+
+- example short run:
+
+	./bin/fab ping ps vmstat summary
